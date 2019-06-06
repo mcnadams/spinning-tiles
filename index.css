@@ -1,0 +1,82 @@
+body {
+  background-color: #a3d5d3;
+}
+
+div {
+  border: 2px solid white;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+div:nth-child(7n) {
+  background-color: red;
+}
+
+div:nth-child(7n + 1) {
+  background-color: orange;
+}
+
+div:nth-child(7n + 2) {
+  background-color: yellow;
+}
+
+div:nth-child(7n + 3) {
+  background-color: green;
+}
+
+div:nth-child(7n + 4) {
+  background-color: blue;
+}
+
+div:nth-child(7n + 5) {
+  background-color: purple;
+}
+
+div:nth-child(7n + 6) {
+  background-color: hotpink;
+}
+
+div:nth-child(3n) {
+  animation: squishX 2s ease-in 1s infinite alternate both running;
+}
+
+div:nth-child(3n + 1) {
+  animation: squishY 1.5s ease-in-out 1s infinite alternate both running;
+}
+
+div:nth-child(3n + 2) {
+  animation: squishBoth 1s ease-in 1s infinite alternate both running;
+}
+
+div:nth-child(5n) {
+  animation: rotate 3s ease-in 1s infinite alternate both running;
+}
+
+div:nth-child(6n) {
+  animation: rotates 1.5s linear 1s infinite alternate running;
+}
+
+@keyframes squishX {
+  from { transform: scaleX(0.1); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes squishY {
+  from { transform: scaleY(0.1); }
+  to   { transform: scaleY(1); }
+}
+
+@keyframes squishBoth {
+  from { transform: scaleY(0.1) scaleX(0.1); }
+  to   { transform: scaleY(1) scaleX(1); }
+}
+
+@keyframes rotate {
+  from { transform: scaleY(0.2) scaleX(0.2) rotate(180deg); }
+  to   { transform: scaleY(1) scaleX(1); }
+}
+
+@keyframes rotates {
+  from { transform: rotate(270deg); }
+}
